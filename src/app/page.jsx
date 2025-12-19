@@ -14,6 +14,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen relative flex flex-col justify-center items-center gap-5 ">
       <UserCard></UserCard>
+
       <div className=" flex gap-5 space-x-4 items-center">
         <FaReact
           size={40}
@@ -32,7 +33,7 @@ export default async function Home() {
           Register
         </Link>
       </div>
-       <div>
+       <div className=" border-2 p-4">
             <h1 className=' text-4xl font-semibold my-7'>User - CLient Data :</h1>
             <p>{JSON.stringify(session)}</p>
         </div>

@@ -7,7 +7,7 @@ const UserCard = () => {
     console.log(session);
     
     return (
-        <div>
+        <div className=" border-2 p-7">
             <h1 className=' text-4xl font-semibold my-7'>User - CLient Data :</h1>
             <p>{JSON.stringify(session)}</p>
         </div>

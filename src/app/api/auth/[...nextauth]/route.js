@@ -10,7 +10,7 @@ export const authOptions = {
   providers: [
     CredentialsProvider({
       //'Sign in with
-      name: "Credentials",
+      name: "Name & Password",
 
       credentials: {
         username: { label: "Username", type: "text", placeholder: "jsmith" },
