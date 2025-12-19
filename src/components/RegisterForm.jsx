@@ -1,9 +1,10 @@
 "use client";
 
-const RegisterForm = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+import { postUser } from "@/actions/server/postUser";
 
+const RegisterForm = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const form = e.target;
 
     const formData = {
@@ -15,7 +16,19 @@ const RegisterForm = () => {
       bloodgroup: form.bloodgroup.value,
     };
 
-    console.log("Submitted Data:", formData);
+    try {
+      const result = await postUser(formData); 
+      console.log("Submitted Data:", result);
+      if (result.success) {
+        alert(`Registration successful! ${result.insertedId}`);
+        form.reset(); 
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error("Error submitting user:", error);
+      alert(`Something went wrong. Try again. ${error}`);
+    }
   };
 
   const inputClass =
