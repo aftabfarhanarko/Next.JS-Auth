@@ -29,7 +29,7 @@ export const authOptions = {
 
 
         // Return null if user data could not be retrieved
-        // return null;
+        return null;
       },
     }),
   ],
