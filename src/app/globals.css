@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+}
+
+.btn {
+  @apply px-5 py-2 bg-sky-100 text-black font-bold rounded shadow shadow-sky-100 cursor-pointer hover:bg-sky-200 hover:scale-105 duration-200 active:scale-95 hover:shadow-xl active:shadow-none active:bg-white disabled:text-gray-400 disabled:active:bg-sky-100 disabled:hover:scale-100 disabled:hover:shadow-none disabled:hover:bg-sky-100 disabled:cursor-auto
+}
