@@ -8,6 +8,7 @@ const Navbar = () => {
             <Link href="/public">Public</Link>
             <Link href="/private">Privet</Link>
             <Link href="/admin">Admin</Link>
+            <Link href="/dashboard">Dashbord</Link>
             
         </div>
     );
