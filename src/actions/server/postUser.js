@@ -36,6 +36,7 @@ export const postUser = async (payload) => {
       name: payload.name || "",
       email: payload.email,
       password: hashedPassword,
+      image:payload.image,
       role: "user",
       createdAt: new Date().toISOString(),
     };
