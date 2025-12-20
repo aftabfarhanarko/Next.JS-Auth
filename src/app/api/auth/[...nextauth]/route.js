@@ -73,15 +73,15 @@ export const authOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
-    GitHubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-    }),
+     GitHubProvider({
+    clientId: process.env.GITHUB_ID,
+    clientSecret: process.env.GITHUB_SECRET
+  })
   ],
 
   callbacks: {
     // JWT token e custom data (role) add kora
-    async jwt({ token, user }) {
+    async jwt({ token, user,account }) {
       // First time sign-in e user object thake (authorize theke)
       if (user) {
         token.role = user.role;
