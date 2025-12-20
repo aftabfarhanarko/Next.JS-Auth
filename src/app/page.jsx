@@ -6,8 +6,8 @@ import Link from "next/link";
 import LoginButton from "@/components/LoginButton";
 import UserCard from "@/components/UserCard";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import AuthButtons from "@/components/AuthButtons";
+import { authOptions } from "@/lib/providerNnext";
 
 
 export default async function Home() {

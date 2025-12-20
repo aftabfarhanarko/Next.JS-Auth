@@ -16,6 +16,8 @@ const client = new MongoClient(uri, {
 });
 
 // let isConnected = false;
+// collection Name ta thick korta hobe
+
 
 export const dbConnect = async (collectionName) => {
   console.log(collectionName);
