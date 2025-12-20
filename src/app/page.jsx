@@ -7,6 +7,7 @@ import LoginButton from "@/components/LoginButton";
 import UserCard from "@/components/UserCard";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import AuthButtons from "@/components/AuthButtons";
 
 
 export default async function Home() {
@@ -27,12 +28,7 @@ export default async function Home() {
       <div className="relative">
         <h2 className="text-5xl">NEXT AUTH</h2>
       </div>
-      <div className="flex gap-5">
-        <LoginButton></LoginButton>
-        <Link href={"/register"} className="btn">
-          Register
-        </Link>
-      </div>
+     <AuthButtons></AuthButtons>
        <div className=" border-2 p-4">
             <h1 className=' text-4xl font-semibold my-7'>User - CLient Data :</h1>
             <p>{JSON.stringify(session)}</p>

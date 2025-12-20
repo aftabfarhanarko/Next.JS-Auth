@@ -75,6 +75,7 @@ export const authOptions = {
       // First time sign-in e user object thake (authorize theke)
       if (user) {
         token.role = user.role;
+        token.image = user.image;
         // Jodi ar extra field lagbe (id, name etc.)
         // token.id = user.id;
       }
@@ -98,15 +99,14 @@ export const authOptions = {
   },
 
   // Optional: custom pages (jodi chaile)
-  pages: {
-    signIn: "/login", // tomar custom login page thakle
-    error: "/login", // error page
-  },
+  // pages: {
+  //   signIn: "/login", // tomar custom login page thakle
+  //   error: "/login", // error page
+  // },
 
   // Debug mode (development e helpful)
   debug: process.env.NODE_ENV === "development",
 };
 
 const handler = NextAuth(authOptions);
-
 export { handler as GET, handler as POST };
